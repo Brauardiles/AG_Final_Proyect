@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+https://dbdiagram.io/d/5f3ef713cf48a141ff55a1af

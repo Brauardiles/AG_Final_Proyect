@@ -1,0 +1,67 @@
+<%= form_with(model: educational_institution, local: true) do |form| %>
+  <% if educational_institution.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(educational_institution.errors.count, "error") %> prohibited this educational_institution from being saved:</h2>
+
+      <ul>
+      <% educational_institution.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rol_data_base %>
+    <%= form.number_field :rol_data_base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Integration %>
+    <%= form.check_box :Integration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adress %>
+    <%= form.text_field :adress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

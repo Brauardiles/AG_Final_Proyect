@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Educational Institutions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rol data base</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Integration</th>
+      <th>Region</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Adress</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @educational_institutions.each do |educational_institution| %>
+      <tr>
+        <td><%= educational_institution.rol_data_base %></td>
+        <td><%= educational_institution.Name %></td>
+        <td><%= educational_institution.Type %></td>
+        <td><%= educational_institution.Integration %></td>
+        <td><%= educational_institution.region %></td>
+        <td><%= educational_institution.city %></td>
+        <td><%= educational_institution.state %></td>
+        <td><%= educational_institution.adress %></td>
+        <td><%= educational_institution.phone %></td>
+        <td><%= educational_institution.email %></td>
+        <td><%= link_to 'Show', educational_institution %></td>
+        <td><%= link_to 'Edit', edit_educational_institution_path(educational_institution) %></td>
+        <td><%= link_to 'Destroy', educational_institution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Educational Institution', new_educational_institution_path %>

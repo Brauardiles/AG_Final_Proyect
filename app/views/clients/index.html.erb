@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Rut</th>
       <th>Institution</th>
       <th>Region</th>
       <th>City</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @clients.each do |client| %>
       <tr>
+        <td><%= client.rut %></td>
         <td><%= client.institution %></td>
         <td><%= client.region %></td>
         <td><%= client.city %></td>

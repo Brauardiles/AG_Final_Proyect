@@ -20,6 +20,7 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Institution", with: @client.institution
     fill_in "Phone", with: @client.phone
     fill_in "Region", with: @client.region
+    fill_in "Rut", with: @client.rut
     fill_in "State", with: @client.state
     click_on "Create Client"
 
@@ -37,6 +38,7 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Institution", with: @client.institution
     fill_in "Phone", with: @client.phone
     fill_in "Region", with: @client.region
+    fill_in "Rut", with: @client.rut
     fill_in "State", with: @client.state
     click_on "Update Client"
 

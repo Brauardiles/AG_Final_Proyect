@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_221149) do
+ActiveRecord::Schema.define(version: 2020_08_24_234923) do
 
   create_table "clients", force: :cascade do |t|
+    t.integer "rut"
     t.string "institution"
     t.string "region"
     t.string "city"
@@ -20,6 +21,21 @@ ActiveRecord::Schema.define(version: 2020_08_24_221149) do
     t.string "adress"
     t.string "email"
     t.integer "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "educational_institutions", force: :cascade do |t|
+    t.integer "rol_data_base"
+    t.string "Name"
+    t.string "Type"
+    t.boolean "Integration"
+    t.string "region"
+    t.string "city"
+    t.string "state"
+    t.string "adress"
+    t.integer "phone"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
